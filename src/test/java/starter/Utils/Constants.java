@@ -5,7 +5,7 @@ public class Constants {
     public static String ID_PATH = "";
     private static final String BASE_URL = "https://api.todoist.com/rest/v2";
     private static final String DIR = System.getProperty("user.dir");
-    public static final String BEARER_TOKEN = "66eb58afb55cef33a1a1d45e59bb0545eec3d86a";
+    public static final String BEARER_TOKEN = "0ff435bc9f6c144ded464f8b75ce38c594279c6d";
 
     //    PROJECTS RESOURCES
     public static final String PROJECT_POST_CREATE_URL = BASE_URL + "/projects";
