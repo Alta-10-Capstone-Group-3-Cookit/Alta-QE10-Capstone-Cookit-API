@@ -61,4 +61,16 @@ public class PostCreateNewProjectStepDef {
     public void apiResponseForCreateANewProjectShouldReturnBadRequestStatusCode(int statusCode) {
         SerenityRest.then().statusCode(statusCode);
     }
+
+    @Given("Request body for create a new project with empty name key")
+    public void requestBodyForCreateANewProjectWithEmptyNameKey() {
+        File json = new File(Constants.PROJECT_REQ_BODY_DIR + "postCreate/EmptyName.json");
+        todoistAPI.postCreate(json);
+    }
+
+    @Given("Request body for create a new project with number data type of name key")
+    public void requestBodyForCreateANewProjectWithNumberDataTypeOfNameKey() {
+        File json = new File(Constants.PROJECT_REQ_BODY_DIR + "postCreate/NumberName.json");
+        todoistAPI.postCreate(json);
+    }
 }
