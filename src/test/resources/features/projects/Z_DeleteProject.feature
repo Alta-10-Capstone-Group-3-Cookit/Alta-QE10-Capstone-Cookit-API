@@ -14,3 +14,12 @@ Feature: Delete a project
     Examples:
       | id         |
       | 1234567890 |
+
+  @Project
+  Scenario Outline: Delete project with invalid id path
+    Given "<id>" as an invalid id path for delete a project
+    When Send DELETE request for delete a project
+    Then API response for delete a project should return 400 Bad Request status code
+    Examples:
+      | id  |
+      | @!+ |
