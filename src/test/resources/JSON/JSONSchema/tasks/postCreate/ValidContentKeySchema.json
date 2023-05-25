@@ -2,16 +2,50 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "comment_count": {
-      "type": "integer"
+    "id": {
+      "type": "string"
     },
-    "completed": {
-      "type": "boolean"
+    "assigner_id": {
+      "type": "null"
+    },
+    "assignee_id": {
+      "type": "null"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "section_id": {
+      "type": "null"
+    },
+    "parent_id": {
+      "type": "null"
+    },
+    "order": {
+      "type": "integer"
     },
     "content": {
       "type": "string"
     },
     "description": {
+      "type": "string"
+    },
+    "is_completed": {
+      "type": "boolean"
+    },
+    "labels": {
+      "type": "array",
+      "items": {}
+    },
+    "priority": {
+      "type": "integer"
+    },
+    "comment_count": {
+      "type": "integer"
+    },
+    "creator_id": {
+      "type": "string"
+    },
+    "created_at": {
       "type": "string"
     },
     "due": {
@@ -20,61 +54,48 @@
         "date": {
           "type": "string"
         },
-        "datetime": {
-          "type": "string"
-        },
-        "recurring": {
-          "type": "boolean"
-        },
         "string": {
           "type": "string"
         },
-        "timezone": {
+        "lang": {
+          "type": "string"
+        },
+        "is_recurring": {
+          "type": "boolean"
+        },
+        "datetime": {
           "type": "string"
         }
       },
       "required": [
         "date",
-        "datetime",
-        "recurring",
         "string",
-        "timezone"
+        "lang",
+        "is_recurring",
+        "datetime"
       ]
-    },
-    "id": {
-      "type": "integer"
-    },
-    "order": {
-      "type": "integer"
-    },
-    "priority": {
-      "type": "integer"
-    },
-    "project_id": {
-      "type": "integer"
-    },
-    "section_id": {
-      "type": "integer"
-    },
-    "parent_id": {
-      "type": "integer"
     },
     "url": {
       "type": "string"
     }
   },
   "required": [
-    "comment_count",
-    "completed",
-    "content",
-    "description",
-    "due",
     "id",
-    "order",
-    "priority",
+    "assigner_id",
+    "assignee_id",
     "project_id",
     "section_id",
     "parent_id",
+    "order",
+    "content",
+    "description",
+    "is_completed",
+    "labels",
+    "priority",
+    "comment_count",
+    "creator_id",
+    "created_at",
+    "due",
     "url"
   ]
 }
