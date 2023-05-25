@@ -52,7 +52,7 @@ public class PostCreateNewTaskStepDef {
 
     @And("Response body content key for create a new task should be {string}")
     public void responseBodyContentKeyForCreateANewTaskShouldBe(String content) {
-        SerenityRest.and().body(TodoistResponses.NAME, equalTo(content));
+        SerenityRest.and().body(TodoistResponses.CONTENT, equalTo(content));
     }
 
 
