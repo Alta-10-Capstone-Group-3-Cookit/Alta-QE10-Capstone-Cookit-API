@@ -16,3 +16,12 @@ Feature: Get a project
     Examples:
       | id         |
       | 1234567890 |
+
+  @Project
+  Scenario Outline: Get a project with invalid id path
+    Given "<id>" as an invalid id path for get a project
+    When Send GET request for get a project
+    Then API response for get a project should return 400 Bad Request status code
+    Examples:
+      | id  |
+      | @!+ |
