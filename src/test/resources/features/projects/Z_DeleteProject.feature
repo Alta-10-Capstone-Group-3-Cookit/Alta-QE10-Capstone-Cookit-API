@@ -1,12 +1,12 @@
 Feature: Delete a project
 
-  @Project
+  @Project @Todoist
   Scenario: Delete a project with available id path
     Given Available id path for delete a project
     When Send DELETE request for delete a project
     Then API response for delete a project should return 204 No Content status code
 
-  @Project
+  @Project @Todoist
   Scenario Outline: Delete project with unavailable id path
     Given "<id>" as an unavailable id path for delete a project
     When Send DELETE request for delete a project
@@ -15,7 +15,7 @@ Feature: Delete a project
       | id         |
       | 1234567890 |
 
-  @Project
+  @Project @Todoist
   Scenario Outline: Delete project with invalid id path
     Given "<id>" as an invalid id path for delete a project
     When Send DELETE request for delete a project
