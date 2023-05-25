@@ -55,4 +55,14 @@ public class GetProjectStepDef {
     public void apiResponseForGetAProjectShouldReturnNotFoundStatusCode(int statusCode) {
         SerenityRest.then().statusCode(statusCode);
     }
+
+    @Given("{string} as an invalid id path for get a project")
+    public void asAnInvalidIdPathForGetAProject(String id) {
+        todoistAPI.getSingle(id);
+    }
+
+    @Then("API response for get a project should return {int} Bad Request status code")
+    public void apiResponseForGetAProjectShouldReturnBadRequestStatusCode(int statusCode) {
+        SerenityRest.then().statusCode(statusCode);
+    }
 }
