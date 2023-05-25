@@ -19,7 +19,7 @@ public class PostCreateNewTaskStepDef {
 
     @Steps
     TodoistAPI todoistAPI;
-    
+
     //valid request body
     @Given("Valid request body for create a new task")
     public void validRequestBodyForCreateANewTask() {
@@ -39,8 +39,8 @@ public class PostCreateNewTaskStepDef {
         SerenityRest.when().post(Constants.TASKS_POST_CREATE_URL);
     }
 
-    @Then("API response should return {int} OK status code")
-    public void apiResponseShouldReturnOKStatusCode(int statusCode) {
+    @Then("API response for create a new task should return {int} OK status code")
+    public void apiResponseForCreateANewTaskShouldReturnOKStatusCode(int statusCode) {
         SerenityRest.then().statusCode(statusCode);
     }
 
@@ -55,7 +55,7 @@ public class PostCreateNewTaskStepDef {
         SerenityRest.and().body(TodoistResponses.NAME, equalTo(content));
     }
 
-    
+
     //empty content key
     @Given("Request body for create a new task with empty content key")
     public void requestBodyForCreateANewTaskWithEmptyContentKey() {
@@ -68,7 +68,7 @@ public class PostCreateNewTaskStepDef {
         SerenityRest.then().statusCode(statusCode);
     }
 
-    
+
     //number data content key
     @Given("Request body for create a new task with number data type of content key")
     public void requestBodyForCreateANewTaskWithNumberDataTypeOfContentKey() {

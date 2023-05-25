@@ -4,7 +4,7 @@ Feature: Create a new task
   Scenario: Post Create a new task with valid request body
     Given Valid request body for create a new task
     When Send VALID POST request for create a new task
-    Then API response should return 200 OK status code
+    Then API response for create a new task should return 200 OK status code
     And Validate create a new task response body JSON Schema
     And Response body content key for create a new task should be "Buy Milk"
 
