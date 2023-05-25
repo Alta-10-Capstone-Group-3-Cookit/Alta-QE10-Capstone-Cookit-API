@@ -32,8 +32,8 @@ public class PostCreateNewLabelStepDef {
         todoistAPI.sendValidPostCreate(Constants.LABELS_POST_CREATE_URL);
     }
 
-    @Then("API response for create a new personal label should return {int} OK status code")
-    public void apiResponseForCreateANewPersonalLabelShouldReturnOKStatusCode(int statusCode) {
+    @Then("API response should return {int} OK status code")
+    public void apiResponseShouldReturnOKStatusCode(int statusCode) {
         SerenityRest.then().statusCode(statusCode);
     }
 
@@ -60,8 +60,8 @@ public class PostCreateNewLabelStepDef {
         SerenityRest.when().post(Constants.LABELS_POST_CREATE_URL);
     }
 
-    @Then("API response for create a new personal label should return {int} Bad Request status code")
-    public void apiResponseForCreateANewPersonalLabelShouldReturnBadRequestStatusCode(int statusCode) {
+    @Then("API response should return {int} Bad Request status code")
+    public void apiResponseShouldReturnBadRequestStatusCode(int statusCode) {
         SerenityRest.then().statusCode(statusCode);
     }
 

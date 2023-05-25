@@ -30,11 +30,6 @@ public class GetPersonalLabelStepDef {
         SerenityRest.when().get(Constants.LABELS_GET_URL + Constants.ID_PATH);
     }
 
-    @Then("API response for get a personal label should return {int} OK status code")
-    public void apiResponseForGetAPersonalLabelShouldReturnOKStatusCode(int statusCode) {
-        SerenityRest.then().statusCode(statusCode);
-    }
-
     @And("Validate get a personal label response body JSON Schema")
     public void validateGetAPersonalLabelResponseBodyJSONSchema() {
         File json = new File(Constants.LABELS_JSON_SCHEMA_DIR + "get/ValidIdGetJSONSchema.json");
@@ -57,8 +52,8 @@ public class GetPersonalLabelStepDef {
         SerenityRest.when().get(Constants.LABELS_GET_URL + Constants.ID_PATH);
     }
 
-    @Then("API response for get a personal label  should return {int} Not Found status code")
-    public void apiResponseForGetAPersonalLabelShouldReturnNotFoundStatusCode(int statusCode) {
+    @Then("API response should return {int} Not Found status code")
+    public void apiResponseShouldReturnNotFoundStatusCode(int statusCode) {
         SerenityRest.then().statusCode(statusCode);
     }
 
@@ -77,4 +72,6 @@ public class GetPersonalLabelStepDef {
     public void apiResponseForGetAPersonalLabelShouldReturnBadRequestStatusCode(int statusCode) {
         SerenityRest.then().statusCode(statusCode);
     }
+
+
 }
