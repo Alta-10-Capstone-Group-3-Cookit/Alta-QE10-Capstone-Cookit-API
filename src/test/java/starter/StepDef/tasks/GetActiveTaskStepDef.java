@@ -29,7 +29,7 @@ public class GetActiveTaskStepDef {
         SerenityRest.when().get(Constants.TASKS_GET_URL + Constants.ID_PATH);
     }
 
-    @Then("API response should return {int} OK status code")
+    @Then("API response for get an active task should return {int} OK status code")
     public void apiResponseShouldReturnOKStatusCode(int statusCode) {
         SerenityRest.then().statusCode(statusCode);
     }
@@ -47,7 +47,7 @@ public class GetActiveTaskStepDef {
 
     @Given("{string} as an unavailable id path")
     public void asAnUnavailableIdPath(String id) {
-        todoistAPI.getSingle(Constants.AVAILABLE_ID_PATH);
+        todoistAPI.getSingle(id);
     }
 
     @Then("API response for get an active task should return {int} Not Found status code")
@@ -57,7 +57,7 @@ public class GetActiveTaskStepDef {
 
     @Given("{string} as an invalid id path with special char")
     public void asAnInvalidIdPathWithSpecialChar(String id) {
-        todoistAPI.getSingle(Constants.AVAILABLE_ID_PATH);
+        todoistAPI.getSingle(id);
     }
 
     @Then("API response for get an active task should return {int} Bad Request status code")

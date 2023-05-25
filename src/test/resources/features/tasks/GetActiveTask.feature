@@ -4,7 +4,7 @@ Feature: Get an active task
   Scenario: Get an active task with available id path
     Given Available id path for get an active task
     When Send GET request for get an active task
-    Then API response should return 200 OK status code
+    Then API response for get an active task should return 200 OK status code
     And Validate get an active task response body JSON Schema
     And Validate response body id key for get an active task should be same as available id path
 
