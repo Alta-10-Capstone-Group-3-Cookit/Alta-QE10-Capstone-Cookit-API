@@ -56,4 +56,33 @@ public class PostUpdateProjectStepDef {
     public void apiResponseForUpdateAProjectShouldReturnNotFound(int statusCode) {
         SerenityRest.then().statusCode(statusCode);
     }
+
+    @Given("Request body for update a project with name key is Things To Buy and {string} as an invalid id path")
+    public void requestBodyForUpdateAProjectWithNameKeyIsThingsToBuyAndAsAnInvalidIdPath(String id) {
+        File json = new File(Constants.PROJECT_REQ_BODY_DIR + "postUpdate/ValidNameKey.json");
+        todoistAPI.postUpdate(id, json);
+    }
+
+    @Then("API response for update a project should return {int} Bad Request status code")
+    public void apiResponseForUpdateAProjectShouldReturnBadRequestStatusCode(int statusCode) {
+        SerenityRest.then().statusCode(statusCode);
+    }
+
+    @Given("Empty request body for update a project and an available id path")
+    public void emptyRequestBodyForUpdateAProjectAndAnAvailableIdPath() {
+        File json = new File(Constants.PROJECT_REQ_BODY_DIR + "postUpdate/EmptyRequest.json");
+        todoistAPI.postUpdate(Constants.AVAILABLE_ID_PATH, json);
+    }
+
+    @Given("Request body for update a project with empty name key and an available id path")
+    public void requestBodyForUpdateAProjectWithEmptyNameKeyAndAnAvailableIdPath() {
+        File json = new File(Constants.PROJECT_REQ_BODY_DIR + "postUpdate/EmptyName.json");
+        todoistAPI.postUpdate(Constants.AVAILABLE_ID_PATH, json);
+    }
+
+    @Given("Request body for update a project with number data type of name key and an available id path")
+    public void requestBodyForUpdateAProjectWithNumberDataTypeOfNameKeyAndAnAvailableIdPath() {
+        File json = new File(Constants.PROJECT_REQ_BODY_DIR + "postUpdate/NumberName.json");
+        todoistAPI.postUpdate(Constants.AVAILABLE_ID_PATH, json);
+    }
 }
