@@ -13,3 +13,15 @@ Feature: Create a New Project
     Given Empty request body for create a new project
     When Send POST request for create a new project
     Then API response for create a new project should return 400 Bad Request status code
+
+  @Project
+  Scenario: Post create a new project with empty name key
+    Given Request body for create a new project with empty name key
+    When Send POST request for create a new project
+    Then API response for create a new project should return 400 Bad Request status code
+
+  @Project
+  Scenario: Post create a new project with number data type of name key
+    Given Request body for create a new project with number data type of name key
+    When Send POST request for create a new project
+    Then API response for create a new project should return 400 Bad Request status code
