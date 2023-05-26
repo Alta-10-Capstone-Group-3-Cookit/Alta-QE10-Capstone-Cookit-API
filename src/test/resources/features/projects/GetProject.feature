@@ -1,6 +1,6 @@
 Feature: Get a project
 
-  @Project
+  @Project @Todoist
   Scenario: Get a project with available id path
     Given Available id path for get a project
     When Send GET request for get a project
@@ -8,7 +8,7 @@ Feature: Get a project
     And Validate get a project response body JSON Schema
     And Validate response body id key for get a project should be same as available id path
 
-  @Project
+  @Project @Todoist
   Scenario Outline: Get a project with unavailable id path
     Given "<id>" as an unavailable id path for get a project
     When Send GET request for get a project
@@ -16,3 +16,12 @@ Feature: Get a project
     Examples:
       | id         |
       | 1234567890 |
+
+  @Project @Todoist
+  Scenario Outline: Get a project with invalid id path
+    Given "<id>" as an invalid id path for get a project
+    When Send GET request for get a project
+    Then API response for get a project should return 400 Bad Request status code
+    Examples:
+      | id  |
+      | @!+ |

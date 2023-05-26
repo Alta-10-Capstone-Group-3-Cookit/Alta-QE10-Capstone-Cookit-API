@@ -36,4 +36,14 @@ public class DeleteProjectStepDef {
     public void apiResponseForDeleteAProjectShouldReturnNotFoundStatusCode(int statusCode) {
         SerenityRest.then().statusCode(statusCode);
     }
+
+    @Given("{string} as an invalid id path for delete a project")
+    public void asAnInvalidIdPathForDeleteAProject(String id) {
+        todoistAPI.deleteSomething(id);
+    }
+
+    @Then("API response for delete a project should return {int} Bad Request status code")
+    public void apiResponseForDeleteAProjectShouldReturnBadRequestStatusCode(int statusCode) {
+        SerenityRest.then().statusCode(statusCode);
+    }
 }
