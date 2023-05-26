@@ -1,9 +1,9 @@
 # ALTA-QE10-Team2-Todoist
 
-This is an API automation testing project for Todoist API. This project is made for completing group project from Alterra Academy, Quality Engineer Immersive Class. In this project, we perform an API automation testing for three resources from Todoist API. There are Projects, Tasks, And Labels resources. For each resource has four endpoints that we take for our testing. And for each endpoints represents create, read, update, and delete.
+This is an API automation testing project for Todoist API. This project is made for completing group project from Alterra Academy, Quality Engineer Immersive Class. In this project, we perform an API automation testing for three resources from Todoist API. There are Projects, Tasks, And Labels resources. For each resource, has four endpoints that we take for our testing. And for each endpoints represents create, read, update, and delete.
 
 
-## Test Cases:
+## Test Cases / Test Scenarios:
   * https://docs.google.com/spreadsheets/d/13gtoDpE9bIOKaoGJgupq_e4utlpGN-YLnIwRN_GRvGs/edit#gid=0
   
 
@@ -34,13 +34,13 @@ This is an API automation testing project for Todoist API. This project is made 
       * Open this project from your IDE
       * Open your IDE terminal
       * Type and run this command on your IDE terminal:
-          mvn clean verify
+          * mvn clean verify
   * Run this project from terminal:
       * Open your terminal
       * Change your directory to where you place this project on your machine using this command:
-          cd <your-project-directory-path>
+          * cd your-project-directory-path
       * Type and run this command on your terminal:
-          mvn clean verify
+          * mvn clean verify
 
 ## Team Member:
   * Naufal Firaas : https://github.com/naufalfiraas
