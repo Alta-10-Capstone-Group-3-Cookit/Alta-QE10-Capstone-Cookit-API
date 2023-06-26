@@ -3,7 +3,9 @@ package starter.Utils;
 public class Constants {
     private static final String BASE_URL = "https://cookit.altapro.online";
     private static final String DIR = System.getProperty("user.dir");
-//    token usertest5
+
+    public static String JSON_SCHEMA_DIR = DIR + "/src/test/resources/JSON_SCHEMA";
+    //    token usertest5
     public static String BEARER_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2OTEwMjI3NjcsInJvbGUiOiJVc2VyIiwidXNlcklkIjoyMn0.sAIvWUGMM1XF4xm3enAmd1mvrsnTNcwgJ8GPYigHrBw";
 
     public static String USERNAME = "usertest5";
