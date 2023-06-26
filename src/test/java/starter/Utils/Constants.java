@@ -5,11 +5,14 @@ public class Constants {
     private static final String DIR = System.getProperty("user.dir");
 
     public static String JSON_SCHEMA_DIR = DIR + "/src/test/resources/JSON_SCHEMA";
+    public static String ASSETS_DIR = DIR + "/src/test/resources/assets";
     //    token usertest5
     public static String BEARER_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2OTEwMjI3NjcsInJvbGUiOiJVc2VyIiwidXNlcklkIjoyMn0.sAIvWUGMM1XF4xm3enAmd1mvrsnTNcwgJ8GPYigHrBw";
 
     public static String USERNAME = "usertest5";
+    public static String REG_USERNAME = "usertest9";
     public static String EMAIL = "usertest5@example.com";
+    public static String REG_EMAIL = "usertest9@example.com";
     public static String PASSWORD = "Asdfg123";
     public static String OUR_USER_ID;
     public static String STEP_ID;
