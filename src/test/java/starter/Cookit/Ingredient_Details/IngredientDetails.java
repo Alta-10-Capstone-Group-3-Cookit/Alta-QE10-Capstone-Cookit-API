@@ -38,4 +38,12 @@ public class IngredientDetails {
                 .pathParam("recipe_id", recipe_id)
                 .pathParam("ingredient_detail_id", ingredient_detail_id);
     }
+
+    @Step("Delete ingredient details positive")
+    public void deleteIngredientDetailsPositive(String recipe_id, String ingredient_detail_id) {
+        SerenityRest.given()
+                .header("Authorization", "Bearer " + Constants.BEARER_TOKEN)
+                .pathParam("recipe_id", recipe_id)
+                .pathParam("ingredient_detail_id", ingredient_detail_id);
+    }
 }

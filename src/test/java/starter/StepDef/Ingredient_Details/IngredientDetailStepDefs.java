@@ -7,6 +7,7 @@ import io.cucumber.java.en.When;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
+import org.openqa.selenium.json.Json;
 import starter.Cookit.Ingredient_Details.IngredientDetailResponses;
 import starter.Cookit.Ingredient_Details.IngredientDetails;
 import starter.Utils.Constants;
@@ -70,6 +71,32 @@ public class IngredientDetailStepDefs {
 
     @And("Validate response body for put update ingredient detail with valid recipe_id path, valid ingredient_detail_id path, and valid request body json should be {string}")
     public void validateResponseBodyForPutUpdateIngredientDetailWithValidRecipe_idPathValidIngredient_detail_idPathAndValidRequestBodyJsonShouldBe(String message) {
+        SerenityRest.and().body(IngredientDetailResponses.MESSAGE, equalTo(message));
+    }
+
+    @Given("valid recipe_id path and valid ingredient_detail_id path for delete ingredient detail with valid recipe_id path and valid ingredient_detail_id path")
+    public void validRecipe_idPathAndValidIngredient_detail_idPathForDeleteIngredientDetailWithValidRecipe_idPathAndValidIngredient_detail_idPath() {
+        ingDetails.deleteIngredientDetailsPositive(Constants.RECIPE_ID, Constants.INGREDIENT_DETAIL_ID);
+    }
+
+    @When("Send DELETE request for delete ingredient detail with valid recipe_id path and valid ingredient_detail_id path")
+    public void sendPUTRequestForDeleteIngredientDetailWithValidRecipe_idPathAndValidIngredient_detail_idPath() {
+        SerenityRest.when().delete(Constants.RECIPES + "/{recipe_id}/ingredients/ingredientDetails/{ingredient_detail_id}");
+    }
+
+    @Then("API response for delete ingredient detail with valid recipe_id path and valid ingredient_detail_id path should return {int} OK status code")
+    public void apiResponseForPutDeleteIngredientDetailWithValidRecipe_idPathAndValidIngredient_detail_idPathShouldReturnOKStatusCode(int statusCode) {
+        SerenityRest.then().statusCode(statusCode);
+    }
+
+    @And("Validate response body JSON Schema for delete ingredient detail with valid recipe_id path and valid ingredient_detail_id path")
+    public void validateResponseBodyJSONSchemaForDeleteIngredientDetailWithValidRecipe_idPathAndValidIngredient_detail_idPath() {
+        File json = new File(Constants.JSON_SCHEMA_DIR + "/Ingredient_Details/DeleteIngredientDetailPositive.json");
+        SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
+    }
+
+    @And("Validate response body for delete ingredient detail with valid recipe_id path and valid ingredient_detail_id path should be {string}")
+    public void validateResponseBodyForDeleteIngredientDetailWithValidRecipe_idPathAndValidIngredient_detail_idPathShouldBe(String message) {
         SerenityRest.and().body(IngredientDetailResponses.MESSAGE, equalTo(message));
     }
 }
