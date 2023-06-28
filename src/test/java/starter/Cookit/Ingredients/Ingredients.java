@@ -32,4 +32,9 @@ public class Ingredients {
                 .contentType(ContentType.JSON)
                 .body(ingredient);
     }
+    @Step("Delete recipe's ingredients")
+    public void deleteRecipesIngredients(){
+        SerenityRest.given()
+                .header("Authorization", "Bearer " + Constants.BEARER_TOKEN);
+    }
 }

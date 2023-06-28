@@ -46,4 +46,37 @@ public class IngredientsStepDef {
         File json = new File(Constants.JSON_SCHEMA_DIR + "/Ingredients/PutUpdateIngredientRecipe.json");
         SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
+
+    // Delete Recipe's Ingredient
+
+    @Given("Delete recipe's ingredients with valid recipe id and ingredient id")
+    public void deleteRecipeSIngredientsWithValidRecipeIdAndIngredientId() {
+        ingredients.deleteRecipesIngredients();
+    }
+
+    @When("Send Delete recipe's ingredients Id")
+    public void sendDeleteRecipeSIngredientsId() {
+        SerenityRest.when().delete(Constants.RECIPES+"/"+Constants.RECIPE_ID+"/ingredients/"+Constants.INGREDIENT_ID);
+    }
+    @And("And Validate delete recipe's ingredients with valid recipe id and ingredient id json schema")
+    public void andValidateDeleteRecipeSIngredientsWithValidRecipeIdAndIngredientIdJsonSchema() {
+        File json = new File(Constants.JSON_SCHEMA_DIR + "/Ingredients/DeleteRecipeIngredients.json");
+        SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
+    }
+
+    @Given("Delete recipe's ingredients with valid recipe id")
+    public void deleteRecipeSIngredientsWithValidRecipeId() {
+        ingredients.deleteRecipesIngredients();
+    }
+
+    @When("Send Delete recipe's ingredients")
+    public void sendDeleteRecipeSIngredients() {
+        SerenityRest.when().delete(Constants.RECIPES+"/"+Constants.RECIPE_ID+"/ingredients");
+    }
+
+    @And("Validate delete recipe's ingredients with valid recipe id json schema")
+    public void validateDeleteRecipeSIngredientsWithValidRecipeIdJsonSchema() {
+        File json = new File(Constants.JSON_SCHEMA_DIR + "/Ingredients/DeleteRecipeIngredients.json");
+        SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
+    }
 }
