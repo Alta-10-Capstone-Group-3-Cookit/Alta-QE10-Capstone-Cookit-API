@@ -31,4 +31,12 @@ public class Images {
                 .pathParam("image_id", image_id)
                 .multiPart("image", img);
     }
+
+    @Step("Delete certain recipe image positive")
+    public void deleteCertainRecipeImagePositive(String recipe_id, String image_id) {
+        SerenityRest.given()
+                .header("Authorization", "Bearer " + Constants.BEARER_TOKEN)
+                .pathParam("recipe_id", recipe_id)
+                .pathParam("image_id", image_id);
+    }
 }

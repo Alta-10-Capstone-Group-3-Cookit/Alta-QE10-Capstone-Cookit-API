@@ -7,6 +7,7 @@ import io.cucumber.java.en.When;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
+import org.openqa.selenium.json.Json;
 import starter.Cookit.Images.Images;
 import starter.Cookit.Images.ImagesResponses;
 import starter.Utils.Constants;
@@ -98,6 +99,32 @@ public class ImageStepDefs {
 
     @And("Validate response body message key for put update recipe image with valid recipe_id path, valid image_id path, and valid image file should be {string}")
     public void validateResponseBodyMessageKeyForPutUpdateRecipeImageWithValidRecipe_idPathValidImage_idPathAndValidImageFileShouldBe(String message) {
+        SerenityRest.and().body(ImagesResponses.MESSAGE, equalTo(message));
+    }
+
+    @Given("valid recipe_id path and valid image_id path for delete recipe image by recipe_id and image_id with valid recipe_id path and valid image_id path")
+    public void validRecipe_idPathAndValidImage_idPathForDeleteRecipeImageByRecipe_idAndImage_idWithValidRecipe_idPathAndValidImage_idPath() {
+        images.deleteCertainRecipeImagePositive(Constants.RECIPE_ID, Constants.IMAGE_ID);
+    }
+
+    @When("Send DELETE request for delete recipe image by recipe_id and image_id with valid recipe_id path and valid image_id path")
+    public void sendDELETERequestForDeleteRecipeImageByRecipe_idAndImage_idWithValidRecipe_idPathAndValidImage_idPath() {
+        SerenityRest.when().delete(Constants.RECIPES + "/{recipe_id}/images/{image_id}");
+    }
+
+    @Then("API response for delete recipe image by recipe_id and image_id with valid recipe_id path and valid image_id path should return {int} OK status code")
+    public void apiResponseForDeleteRecipeImageByRecipe_idAndImage_idWithValidRecipe_idPathAndValidImage_idPathShouldReturnOKStatusCode(int statusCode) {
+        SerenityRest.then().statusCode(statusCode);
+    }
+
+    @And("Validate response body JSON Schema for delete recipe image by recipe_id and image_id with valid recipe_id path and valid image_id path")
+    public void validateResponseBodyJSONSchemaForDeleteRecipeImageByRecipe_idAndImage_idWithValidRecipe_idPathAndValidImage_idPath() {
+        File json = new File(Constants.JSON_SCHEMA_DIR + "/Images/DeleteCertainRecipeImagePositive.json");
+        SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
+    }
+
+    @And("Validate response body message key for delete recipe image by recipe_id and image_id with valid recipe_id path and valid image_id path should be {string}")
+    public void validateResponseBodyMessageKeyForDeleteRecipeImageByRecipe_idAndImage_idWithValidRecipe_idPathAndValidImage_idPathShouldBe(String message) {
         SerenityRest.and().body(ImagesResponses.MESSAGE, equalTo(message));
     }
 }
