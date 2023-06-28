@@ -18,17 +18,17 @@ public class AuthStepDef {
 
     //Post Login User
     @Given("Post login user with valid path and valid json body")
-    public void postLoginUserWithValidPathAndValidJsonBody(){
+    public void postLoginUserWithValidPathAndValidJsonBody() {
         auth.postLoginUserWithValidPath(Constants.USERNAME, Constants.PASSWORD);
     }
 
     @When("Send post login user")
-    public void sendPostLoginUser(){
+    public void sendPostLoginUser() {
         SerenityRest.when().post(Constants.LOGIN);
     }
 
     @Then("Status code should be {int} OK")
-    public void statusCodeShouldBeOk(int ok){
+    public void statusCodeShouldBeOk(int ok) {
         SerenityRest.then().statusCode(ok);
     }
 
@@ -40,17 +40,17 @@ public class AuthStepDef {
 
     //Post Registration User
     @Given("Post register user with valid path and valid json body")
-    public void postregisterUserWithValidPathAndValidJsonBody(){
+    public void postregisterUserWithValidPathAndValidJsonBody() {
         auth.postRegisterUserWithValidPathAndJsonBody(Constants.REG_USERNAME, Constants.REG_EMAIL, Constants.PASSWORD);
     }
 
     @When("Send post registration user")
-    public void sendPostRegistrationUser(){
+    public void sendPostRegistrationUser() {
         SerenityRest.when().post(Constants.REGISTER);
     }
 
     @Then("Status code should be {int} created")
-    public void statusCodeShouldBeCreated(int created){
+    public void statusCodeShouldBeCreated(int created) {
         SerenityRest.then().statusCode(created);
     }
 
@@ -60,4 +60,18 @@ public class AuthStepDef {
         SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
 
+    @Given("valid request body for login back to user")
+    public void validRequestBodyForLoginBackToUser() {
+        auth.loginBackToUser(Constants.USERNAME, Constants.PASSWORD);
+    }
+
+    @When("Send POST method for login back to user")
+    public void sendPOSTMethodForLoginBackToUser() {
+        Constants.BEARER_TOKEN = SerenityRest.when().post(Constants.LOGIN).jsonPath().getString("data.id");
+    }
+
+    @Then("Status code for login back to user should be {int} OK status code")
+    public void statusCodeForLoginBackToUserShouldBeOKStatusCode(int statusCode) {
+        SerenityRest.then().statusCode(statusCode);
+    }
 }
