@@ -11,9 +11,9 @@ import java.util.Map;
 public class Cart {
 
     @Step("Post insert user cart positive")
-    public void postInsertUserCartPositive(int ingredient_id) {
+    public void postInsertUserCartPositive(String ingredient_id) {
         Map<String, Object> json = new HashMap<>();
-        json.put("ingredient_id", ingredient_id);
+        json.put("ingredient_id", Integer.valueOf(ingredient_id));
         json.put("quantity", 2);
 
         SerenityRest.given()
