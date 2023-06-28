@@ -4,7 +4,7 @@ public class Constants {
     private static final String BASE_URL = "https://cookit.altapro.online";
     private static final String DIR = System.getProperty("user.dir");
 
-    public static String JSON_SCHEMA_DIR = DIR + "/src/test/resources/JSON_SCHEMA";
+    public static String JSON_SCHEMA_DIR = DIR + "/src/test/resources/JSON_Schema";
     public static String ASSETS_DIR = DIR + "/src/test/resources/assets";
     //    token usertest5
     public static String BEARER_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2OTEwMjI3NjcsInJvbGUiOiJVc2VyIiwidXNlcklkIjoyMn0.sAIvWUGMM1XF4xm3enAmd1mvrsnTNcwgJ8GPYigHrBw";
@@ -19,7 +19,7 @@ public class Constants {
     public static String RECIPE_ID = "20";
     public static String IMAGE_ID;
     public static String COMMENT_ID;
-    public static String INGREDIENT_ID;
+    public static int INGREDIENT_ID = 7;
     public static String INGREDIENT_DETAIL_ID;
     public static String CART_ID;
     public static String TRANSACTION_ID;
