@@ -50,6 +50,24 @@ public class StepsStepDef {
         SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
 
+    // Delete recipes step Id
+
+    @Given("Delete recipes step Id with valid recipe id")
+    public void deleteRecipesStepIdWithValidRecipeId() {
+        steps.deleteRecipesStepIdPositive();
+    }
+
+    @When("Send Delete recipes step Id")
+    public void sendDeleteRecipesStepId() {
+        SerenityRest.when().delete(Constants.RECIPES + "/" + Constants.RECIPE_ID + "/steps" + "/"+ Constants.STEP_ID);
+    }
+
+    @And("Validate delete recipes step Id with valid recipe id json schema")
+    public void validateDeleteRecipesStepIdWithValidRecipeIdJsonSchema() {
+        File json = new File(Constants.JSON_SCHEMA_DIR + "/Steps/PutUpdateRecipesStepPositive.json");
+        SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
+    }
+
     @Given("Delete recipes step with valid recipe id")
     public void deleteRecipesStepWithValidRecipeId() {
         steps.deleteRecipesStepPositive();
@@ -57,7 +75,7 @@ public class StepsStepDef {
 
     @When("Send Delete recipes step")
     public void sendDeleteRecipesStep() {
-        SerenityRest.when().delete(Constants.RECIPES + "/" + Constants.RECIPE_ID + "/steps" + "/"+ Constants.STEP_ID);
+        SerenityRest.when().delete(Constants.RECIPES + "/" + Constants.RECIPE_ID + "/steps");
     }
 
     @And("Validate delete recipes step with valid recipe id json schema")

@@ -32,7 +32,12 @@ public class Steps {
                 .body(steps);
     }
 
-    @Step("Delete Recipes Step Positive")
+    @Step("Delete Recipes Step Id Positive")
+    public void deleteRecipesStepIdPositive(){
+        SerenityRest.given()
+                .header("Authorization", "Bearer " + Constants.BEARER_TOKEN);
+    }
+    @Step("Delete Recipes Step  Positive")
     public void deleteRecipesStepPositive(){
         SerenityRest.given()
                 .header("Authorization", "Bearer " + Constants.BEARER_TOKEN);
