@@ -15,7 +15,7 @@ public class Users {
     @Step("Get user profile positive")
     public void getUserProfileValidPath() {
         SerenityRest.given()
-                .header("Authorization", "Bearer " + Constants.BEARER_TOKEN);
+                .header("Authorization", "Bearer" + Constants.BEARER_TOKEN);
     }
 
     @Step("Put update user positive")
