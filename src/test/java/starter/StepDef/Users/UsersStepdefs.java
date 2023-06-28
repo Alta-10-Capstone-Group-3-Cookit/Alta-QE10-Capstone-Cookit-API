@@ -194,4 +194,30 @@ public class UsersStepdefs {
         InputStream json = getClass().getClassLoader().getResourceAsStream("JSON_Schema/Users/GetListUserFollowingPositive.json");
         SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
+
+    @Given("Valid path for delete user data with valid path")
+    public void validPathForDeleteUserDataWithValidPath() {
+        users.deleteUserDataPositive();
+    }
+
+    @When("Send DELETE request for delete user data with valid path")
+    public void sendDELETERequestForDeleteUserDataWithValidPath() {
+        SerenityRest.when().delete(Constants.USERS);
+    }
+
+    @Then("API response for delete user data with valid path should return {int} OK status code")
+    public void apiResponseForDeleteUserDataWithValidPathShouldReturnOKStatusCode(int statusCode) {
+        SerenityRest.then().statusCode(statusCode);
+    }
+
+    @And("Validate response body JSON Schema for delete user data with valid path")
+    public void validateResponseBodyJSONSchemaForDeleteUserDataWithValidPath() {
+        File json = new File(Constants.JSON_SCHEMA_DIR + "/Users/DeleteUserDataPositive.json");
+        SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
+    }
+
+    @And("Validate response body message key for delete user data with valid path should be {string}")
+    public void validateResponseBodyMessageKeyForDeleteUserDataWithValidPathShouldBe(String message) {
+        SerenityRest.and().body(UsersResponses.MESSAGE, equalTo(message));
+    }
 }
