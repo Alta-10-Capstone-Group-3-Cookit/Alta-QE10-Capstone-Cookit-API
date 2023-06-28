@@ -23,7 +23,7 @@ public class Constants {
     public static String INGREDIENT_DETAIL_ID;
     public static String CART_ID;
     public static String TRANSACTION_ID;
-    public static String TRANSACTION_DETAIL_ID;
+    public static String TRANSACTION_DETAIL_ID = "9";
 
     // URL
     public static String REGISTER = BASE_URL + "/register";
