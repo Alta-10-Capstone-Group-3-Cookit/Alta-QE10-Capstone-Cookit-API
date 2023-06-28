@@ -20,7 +20,7 @@ public class Constants {
     public static String IMAGE_ID = "44";
     public static String COMMENT_ID;
     public static String INGREDIENT_ID = "7";
-    public static String INGREDIENT_DETAIL_ID;
+    public static String INGREDIENT_DETAIL_ID = "16";
     public static String CART_ID;
     public static String TRANSACTION_ID;
     public static String TRANSACTION_DETAIL_ID = "9";
