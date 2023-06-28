@@ -7,7 +7,7 @@ public class Constants {
     public static String JSON_SCHEMA_DIR = DIR + "/src/test/resources/JSON_Schema";
     public static String ASSETS_DIR = DIR + "/src/test/resources/assets";
     //    token usertest5
-    public static String BEARER_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2OTExMjY4NjQsInJvbGUiOiJVc2VyIiwidXNlcklkIjoyMn0.9klI0SN3GQLhWHG8yuuhsz1nFoQvgsWfhmXrXe6ptiw";
+    public static String BEARER_TOKEN;
 
     public static String USERNAME = "usertest5";
     public static String REG_USERNAME = "usertest9";
