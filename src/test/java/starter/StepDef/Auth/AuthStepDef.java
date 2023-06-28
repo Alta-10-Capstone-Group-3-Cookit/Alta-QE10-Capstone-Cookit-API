@@ -24,7 +24,7 @@ public class AuthStepDef {
 
     @When("Send post login user")
     public void sendPostLoginUser() {
-        SerenityRest.when().post(Constants.LOGIN);
+        Constants.BEARER_TOKEN = SerenityRest.when().post(Constants.LOGIN).jsonPath().getString("data.token");
     }
 
     @Then("Status code should be {int} OK")

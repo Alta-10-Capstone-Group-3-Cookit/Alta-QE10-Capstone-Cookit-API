@@ -63,5 +63,10 @@ public class Recipes {
         SerenityRest.given()
                 .header("Authorization", "Bearer " + Constants.BEARER_TOKEN);
     }
+    @Step("Delete recipes Positive")
+    public void deleteRecipesPositive(){
+        SerenityRest.given()
+                .header("Authorization", "Bearer " + Constants.BEARER_TOKEN);
+    }
 
 }
