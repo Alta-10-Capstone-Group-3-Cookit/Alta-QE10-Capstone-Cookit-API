@@ -63,4 +63,5 @@ public class Recipes {
         SerenityRest.given()
                 .header("Authorization", "Bearer " + Constants.BEARER_TOKEN);
     }
+
 }
