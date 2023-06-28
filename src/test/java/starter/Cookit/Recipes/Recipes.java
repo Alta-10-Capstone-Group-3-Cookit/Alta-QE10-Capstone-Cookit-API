@@ -58,5 +58,9 @@ public class Recipes {
         SerenityRest.given()
                 .header("Authorization", "Bearer " + Constants.BEARER_TOKEN);
     }
-
+    @Step("Get details of recipes")
+    public void getDetailsOfRecipe(){
+        SerenityRest.given()
+                .header("Authorization", "Bearer " + Constants.BEARER_TOKEN);
+    }
 }

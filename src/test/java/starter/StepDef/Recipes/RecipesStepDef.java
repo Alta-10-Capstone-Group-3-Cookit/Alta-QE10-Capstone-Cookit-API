@@ -137,4 +137,22 @@ public class RecipesStepDef {
         File json = new File(Constants.JSON_SCHEMA_DIR+"/Recipes/PutUpdateUser'sRecipePositive.json");
         SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
+
+    // Get Details Of Recipe
+
+    @Given("Get details of recipes with valid recipe id")
+    public void getDetailsOfRecipesWithValidRecipeId() {
+        recipes.getDetailsOfRecipe();
+    }
+
+    @When("Send Get details of recipes")
+    public void sendGetDetailsOfRecipes() {
+        SerenityRest.when().get(Constants.RECIPES+"/"+Constants.RECIPE_ID+"/detail");
+    }
+
+    @And("Validate Get details of recipes with valid recipe id json schema")
+    public void validateGetDetailsOfRecipesWithValidRecipeIdJsonSchema() {
+        File json = new File(Constants.JSON_SCHEMA_DIR+"/Recipes/GetDetailsOfRecipesPositive.json");
+        SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
+    }
 }
