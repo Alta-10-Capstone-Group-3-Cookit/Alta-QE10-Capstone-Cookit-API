@@ -32,4 +32,15 @@ public class Auth {
                 .contentType(ContentType.JSON)
                 .body(user);
     }
+
+    @Step("Post login back to user")
+    public void loginBackToUser(String username, String password) {
+        Map<String, Object> json = new HashMap<>();
+        json.put("username", username);
+        json.put("password", password);
+
+        SerenityRest.given()
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
 }

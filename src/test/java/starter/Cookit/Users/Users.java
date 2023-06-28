@@ -70,4 +70,10 @@ public class Users {
                 .queryParam("page", page)
                 .queryParam("limit", limit);
     }
+
+    @Step("Delete user data positive")
+    public void deleteUserDataPositive() {
+        SerenityRest.given()
+                .header("Authorization", "Bearer " + Constants.BEARER_TOKEN);
+    }
 }
