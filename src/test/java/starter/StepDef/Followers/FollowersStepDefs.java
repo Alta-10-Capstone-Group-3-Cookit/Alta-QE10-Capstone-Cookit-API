@@ -37,4 +37,16 @@ public class FollowersStepDefs {
     public void postFollowUserWithValid(String id) {
         followers.postFollowUserPositive(id);
     }
+
+    @Given("Delete unfollow user with valid id {int}")
+    public void deleteUnfollowUserWithValidId(int id) {
+        followers.postLoginUserToUnfollow(Constants.USERNAME, Constants.PASSWORD);
+        Constants.BEARER_TOKEN = SerenityRest.when().post(Constants.LOGIN).jsonPath().getString("data.token");
+        followers.deleteUnfollowUserPositive(id);
+    }
+
+    @When("Send delete unfollow user")
+    public void sendDeleteUnfollowUser() {
+        SerenityRest.when().delete(Constants.USERS + "/unfollow/" + Followers.idUserToUnollow);
+    }
 }
