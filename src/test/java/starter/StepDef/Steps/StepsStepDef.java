@@ -19,11 +19,15 @@ public class StepsStepDef {
     @Given("Post insert new recipes step with valid recipe id and json body")
     public void postInsertNewRecipesStepWithValidRecipeIdAndJsonBody(){
         steps.postInsertNewRecipesStepPositive("Panaskan minyak");
+        SerenityRest.when().post(Constants.RECIPES + "/" + Constants.RECIPE_ID + "/steps");
+        steps.postInsertNewRecipesStepPositive("Masukkan Nasi");
     }
 
     @When("Send Post insert new recipes step")
     public void sendPostInsertNewRecipesStep() {
-        SerenityRest.when().post(Constants.RECIPES + "/" + Constants.RECIPE_ID + "/steps");
+        Constants.BEARER_TOKEN = SerenityRest.when()
+                .post(Constants.RECIPES + "/" + Constants.RECIPE_ID + "/steps")
+                .jsonPath().getString("data.id");
     }
 
     @And("Validate post insert new recipes step with valid recipe id and json body json schema")

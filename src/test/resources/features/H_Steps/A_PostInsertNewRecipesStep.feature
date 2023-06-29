@@ -1,5 +1,6 @@
 Feature: Post insert new recipes step
 
+  @LOGIN_to_PostRecipes
   Scenario: Post insert new recipes step with valid recipe id and json body
     Given Post insert new recipes step with valid recipe id and json body
     When Send Post insert new recipes step
