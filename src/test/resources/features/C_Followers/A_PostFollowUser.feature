@@ -8,4 +8,4 @@ Feature: Post follow user
     And Validate post follow user with valid id json schema
     Examples:
       | id |
-      | 1  |
+      | 30 |

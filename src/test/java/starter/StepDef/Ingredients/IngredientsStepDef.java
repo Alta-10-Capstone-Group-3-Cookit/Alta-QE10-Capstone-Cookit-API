@@ -27,7 +27,7 @@ public class IngredientsStepDef {
 
     @And("Validate post insert new recipe's ingredients with valid recipe id and json body json schema")
     public void validatePostInsertNewRecipeSIngredientsWithValidRecipeIdAndJsonBodyJsonSchema() {
-        File json = new File(Constants.JSON_SCHEMA_DIR + "/Ingredients/PostInsertNewUser'sRecipesIngredientPositive.json");
+        File json = new File(Constants.JSON_SCHEMA_DIR + "/Ingredients/PostInsertNewRecipe'sIngredientPositive.json");
         SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
 

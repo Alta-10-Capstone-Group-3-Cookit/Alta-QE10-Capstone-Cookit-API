@@ -40,7 +40,7 @@ public class ImageStepDefs {
 
     @And("Validate response body JSON Schema for post insert recipe image with valid recipe_id path and valid image file")
     public void validateResponseBodyJSONSchemaForPostInsertRecipeImageWithValidRecipe_idPathAndValidImageFile() {
-        File json = new File(Constants.JSON_SCHEMA_DIR + "/Images/PostInsertRecipeImagePositive.json");
+        File json = new File(Constants.JSON_SCHEMA_DIR + "/Images/PostInserRecipeImagePositive.json");
         SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
 
