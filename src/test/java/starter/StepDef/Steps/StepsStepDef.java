@@ -25,7 +25,7 @@ public class StepsStepDef {
 
     @When("Send Post insert new recipes step")
     public void sendPostInsertNewRecipesStep() {
-        Constants.BEARER_TOKEN = SerenityRest.when()
+        Constants.STEP_ID = SerenityRest.when()
                 .post(Constants.RECIPES + "/" + Constants.RECIPE_ID + "/steps")
                 .jsonPath().getString("data.id");
     }
