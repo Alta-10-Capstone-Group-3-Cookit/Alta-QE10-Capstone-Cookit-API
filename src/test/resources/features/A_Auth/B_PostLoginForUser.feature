@@ -1,6 +1,6 @@
 Feature: Post Login For User
 
-  @B_Auth
+  @LOGIN_to_PostRecipes
   Scenario: Post login user with valid path and valid json body
     Given Post login user with valid path and valid json body
     When Send post login user

@@ -17,7 +17,7 @@ public class Constants {
     public static String OUR_USER_ID;
     public static String STEP_ID= "8";
   
-    public static String RECIPE_ID = "26";
+    public static String RECIPE_ID;
     public static String IMAGE_ID = "44";
 
     public static String COMMENT_ID;

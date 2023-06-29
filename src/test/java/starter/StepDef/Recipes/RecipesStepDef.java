@@ -24,7 +24,7 @@ public class RecipesStepDef {
     }
     @When("Send post insert new user's recipes")
     public void sendPostInsertNewUsersRecipes(){
-        SerenityRest.when().post(Constants.RECIPES);
+        Constants.RECIPE_ID = SerenityRest.when().post(Constants.RECIPES).jsonPath().getString("data.id");
     }
     @And("Validate post insert new user's recipes with valid path and valid data json schema")
     public void validatePostInsertNewUsersRecipesWithValidPathAndValidData (){

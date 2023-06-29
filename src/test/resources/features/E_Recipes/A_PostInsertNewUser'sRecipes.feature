@@ -1,5 +1,6 @@
 Feature: Post insert new user's recipes
 
+  @LOGIN_to_PostRecipes
   Scenario: Post insert new user's recipes with valid path and valid data
     Given Post insert new user's recipes with valid path and valid data
     When Send post insert new user's recipes
