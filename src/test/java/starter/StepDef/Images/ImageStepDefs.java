@@ -51,6 +51,11 @@ public class ImageStepDefs {
 
     @Given("valid recipe_id path for delete recipe image by recipe id")
     public void validRecipe_idPathForDeleteRecipeImageByRecipeId() {
+//        Post image first
+        File recipe_img = new File(Constants.ASSETS_DIR + "/comment_img.png");
+        images.postInsertRecipeImagePositive(Constants.RECIPE_ID, recipe_img);
+        SerenityRest.when().post(Constants.RECIPES + "/{recipe_id}/images");
+
         images.deleteAllRecipeImagesPositive(Constants.RECIPE_ID);
     }
 
