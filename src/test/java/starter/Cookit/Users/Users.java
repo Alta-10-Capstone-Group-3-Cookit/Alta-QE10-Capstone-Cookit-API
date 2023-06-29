@@ -76,4 +76,12 @@ public class Users {
         SerenityRest.given()
                 .header("Authorization", "Bearer " + Constants.BEARER_TOKEN);
     }
+
+    @Step("Get list user followers positive")
+    public void getListUserFollowesPositive(String page, String limit) {
+        SerenityRest.given()
+                .header("Authorization", "Bearer " + Constants.BEARER_TOKEN)
+                .queryParam("page", page)
+                .queryParam("limit", limit);
+    }
 }

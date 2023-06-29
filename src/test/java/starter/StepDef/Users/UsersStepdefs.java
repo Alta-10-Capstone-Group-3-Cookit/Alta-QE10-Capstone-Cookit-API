@@ -220,4 +220,25 @@ public class UsersStepdefs {
     public void validateResponseBodyMessageKeyForDeleteUserDataWithValidPathShouldBe(String message) {
         SerenityRest.and().body(UsersResponses.MESSAGE, equalTo(message));
     }
+
+    @Given("{string} as valid page parameter and {string} as valid limit parameter for get list of user followers with valid page and limit parameter")
+    public void asValidPageParameterAndAsValidLimitParameterForGetListOfUserFollowersWithValidPageAndLimitParameter(String page, String limit) {
+        users.getListUserFollowesPositive(page, limit);
+    }
+
+    @When("Send GET request for get list of user followers with valid page and limit parameter")
+    public void sendGETRequestForGetListOfUserFollowersWithValidPageAndLimitParameter() {
+        SerenityRest.when().get(Constants.USERS + "/follower");
+    }
+
+    @Then("API response for get list of user followers with valid page and limit parameter should return {int} OK status code")
+    public void apiResponseForGetListOfUserFollowersWithValidPageAndLimitParameterShouldReturnOKStatusCode(int statusCode) {
+        SerenityRest.then().statusCode(statusCode);
+    }
+
+    @And("Validate response body JSON Schema for get list of user followers with valid page and limit parameter")
+    public void validateResponseBodyJSONSchemaForGetListOfUserFollowersWithValidPageAndLimitParameter() {
+        File json = new File(Constants.JSON_SCHEMA_DIR + "/Users/GetListUserFollowerPositive.json");
+        SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
+    }
 }
