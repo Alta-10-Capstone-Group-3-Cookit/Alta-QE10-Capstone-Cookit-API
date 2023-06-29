@@ -15,7 +15,7 @@ public class Constants {
     public static String REG_EMAIL = "usertest9@example.com";
     public static String PASSWORD = "Asdfg123";
     public static String OUR_USER_ID;
-    public static String STEP_ID= "8";
+    public static String STEP_ID;
   
     public static String RECIPE_ID;
     public static String IMAGE_ID = "44";
