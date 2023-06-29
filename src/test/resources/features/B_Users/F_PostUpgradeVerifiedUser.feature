@@ -1,6 +1,6 @@
 Feature: Post upgrade verified user
 
-  @B_Users
+  @B_Users @Cookit
   Scenario: Post upgrade verified user with valid path
     Given Valid path for post upgrade verified user with valid path
     When Send POST request for post upgrade verified user with valid path

@@ -1,6 +1,6 @@
 Feature: Delete user cart
 
-  @K_Carts
+  @K_Carts @Cookit
   Scenario: Delete user cart with valid card_id path
     Given valid cart_id path for delete user cart with valid card_id path
     When Send DELETE request for delete user cart with valid card_id path

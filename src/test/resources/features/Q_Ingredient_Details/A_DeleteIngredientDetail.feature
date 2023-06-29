@@ -1,6 +1,6 @@
 Feature: Delete ingredient detail
 
-  @Q_Ingredient_Detail
+  @Q_Ingredient_Detail @Cookit
   Scenario: Delete ingredient detail with valid recipe_id path and valid ingredient_detail_id path
     Given valid recipe_id path and valid ingredient_detail_id path for delete ingredient detail with valid recipe_id path and valid ingredient_detail_id path
     When Send DELETE request for delete ingredient detail with valid recipe_id path and valid ingredient_detail_id path

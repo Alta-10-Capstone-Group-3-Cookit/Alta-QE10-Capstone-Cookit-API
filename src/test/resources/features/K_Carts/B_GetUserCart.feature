@@ -1,6 +1,6 @@
 Feature: Get user cart
 
-  @K_Carts
+  @K_Carts @Cookit
   Scenario: Get list user carts with valid page parameter and valid limit parameter
     Given "1" as valid page parameter and "1" as valid limit parameter for get list user carts with valid page parameter and valid limit parameter
     When Send GET request for get list user carts with valid page parameter and valid limit parameter

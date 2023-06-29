@@ -1,6 +1,6 @@
 Feature: Get show user profile
 
-  @B_Users
+  @B_Users @Cookit
   Scenario: Get show user profile with valid path
     Given Valid path for get show user profile with valid path
     When Send GET request for get show user profile with valid path

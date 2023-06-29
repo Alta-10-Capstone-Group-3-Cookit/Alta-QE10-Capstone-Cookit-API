@@ -1,6 +1,6 @@
 Feature: Put Update Recipes Step
 
-
+ @Cookit
   Scenario: Put update recipes step with valid recipe id and step id and json body
     Given Put update recipes step with valid recipe id and step id and json body
     When Send Put update recipes step

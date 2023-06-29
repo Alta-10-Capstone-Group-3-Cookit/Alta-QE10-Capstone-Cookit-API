@@ -1,6 +1,6 @@
 Feature: Put update recipe image
 
-  @F_Images
+  @F_Images @Cookit
   Scenario: Put update recipe image with valid recipe_id path, valid image_id path, and valid image file
     Given valid recipe_id path, valid image_id path, and valid image file for put update recipe image with valid recipe_id path, valid image_id path, and valid image file
     When Send PUT request for put update recipe image with valid recipe_id path, valid image_id path, and valid image file

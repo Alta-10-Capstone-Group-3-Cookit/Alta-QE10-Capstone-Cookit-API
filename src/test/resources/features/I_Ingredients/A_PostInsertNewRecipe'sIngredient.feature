@@ -1,6 +1,6 @@
 Feature: Post insert new recipe's ingredients
 
-
+  @Cookit
   Scenario: Post insert new recipe's ingredients with valid recipe id and json body
     Given Post insert new recipe's ingredients with valid recipe id and json body
     When Send Post insert new recipe's ingridients

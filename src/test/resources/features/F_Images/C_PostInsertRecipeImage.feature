@@ -1,6 +1,6 @@
 Feature: Post insert recipe image (2)
 
-  @F_Images
+  @F_Images @Cookit
   Scenario: Post insert recipe image with valid recipe_id path and valid image file
     Given valid recipe_id path and valid image for post insert recipe image with valid recipe_id path and valid image file
     When Send POST request for post insert recipe image with valid recipe_id path and valid image file

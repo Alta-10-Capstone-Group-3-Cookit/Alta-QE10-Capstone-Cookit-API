@@ -1,6 +1,6 @@
 Feature: Put update ingredient detail
 
-  @J_Ingredient_Details
+  @J_Ingredient_Details @Cookit
   Scenario: Put update ingredient detail with valid recipe_id path, valid ingredient_detail_id path, and valid request body json
     Given valid recipe_id path, valid ingredient_detail_id path, and valid request body json for put update ingredient detail with valid recipe_id path, valid ingredient_detail_id path, and valid request body json
     When Send PUT request for put update ingredient detail with valid recipe_id path, valid ingredient_detail_id path, and valid request body json

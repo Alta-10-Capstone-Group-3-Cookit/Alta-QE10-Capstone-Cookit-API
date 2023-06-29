@@ -1,6 +1,6 @@
 Feature: Post Insert New User's Transaction
 
-
+  @Cookit
   Scenario: Post insert new user's transaction with valid path and json body
     Given Get Post insert new user's transaction with valid path and json body
     When Send Post insert new user's transaction

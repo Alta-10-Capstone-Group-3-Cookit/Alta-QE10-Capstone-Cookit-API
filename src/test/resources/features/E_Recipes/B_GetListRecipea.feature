@@ -1,5 +1,6 @@
 Feature: Get List Recipe
 
+  @Cookit
   Scenario: Get list recipes with valid path
     Given Get list recipes with valid path
     When Send get list recipes

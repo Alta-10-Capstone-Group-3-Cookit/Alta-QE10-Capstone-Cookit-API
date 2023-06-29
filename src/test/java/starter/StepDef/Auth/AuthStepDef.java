@@ -41,7 +41,7 @@ public class AuthStepDef {
     //Post Registration User
     @Given("Post register user with valid path and valid json body")
     public void postregisterUserWithValidPathAndValidJsonBody() {
-        auth.postRegisterUserWithValidPathAndJsonBody(Constants.REG_USERNAME, Constants.REG_EMAIL, Constants.PASSWORD);
+        auth.postRegisterUserWithValidPathAndJsonBody(Constants.USERNAME, Constants.EMAIL, Constants.PASSWORD);
     }
 
     @When("Send post registration user")

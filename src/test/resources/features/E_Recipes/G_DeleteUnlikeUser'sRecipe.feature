@@ -1,6 +1,6 @@
 Feature: Delete Unlike User's Recipe
 
-
+  @Cookit
   Scenario: Delete unlike user's recipe with valid recipe id
     Given Delete unlike user's recipe with valid recipe id
     When Send Delete unlike user's recipe

@@ -1,6 +1,6 @@
 Feature: Get user transaction detail
 
-  @M_Transaction_Detail
+  @M_Transaction_Detail @Cookit
   Scenario: Get user transaction detail with valid transaction_detail_id path
     Given valid transaction_detail_id path for get user transaction detail with valid transaction_detail_id path
     When Send GET request for get user transaction detail with valid transaction_detail_id path

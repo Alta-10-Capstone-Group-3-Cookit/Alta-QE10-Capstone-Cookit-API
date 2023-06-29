@@ -1,6 +1,6 @@
 Feature: Delete user's recipe
 
-
+  @Cookit
   Scenario: Delete user's recipe with valid recipe id
     Given Delete user's recipe with valid recipe id
     When Send Delete user's recipes

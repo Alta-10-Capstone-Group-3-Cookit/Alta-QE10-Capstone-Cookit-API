@@ -1,6 +1,6 @@
 Feature: Get list of user's transaction
 
-
+ @Cookit
   Scenario: Get list of user's transaction with valid path
     Given Get list of user's transaction with valid path
     When Send Get list of user's transaction

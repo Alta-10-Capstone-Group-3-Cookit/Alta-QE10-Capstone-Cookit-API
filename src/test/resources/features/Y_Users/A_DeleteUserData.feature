@@ -1,6 +1,6 @@
 Feature: Delete user data
 
-  @Y_Users
+  @Y_Users @Cookit
   Scenario: Delete user data with valid path
     Given Valid path for delete user data with valid path
     When Send DELETE request for delete user data with valid path

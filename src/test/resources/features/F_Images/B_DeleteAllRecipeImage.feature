@@ -1,6 +1,6 @@
 Feature: Delete all recipe images
 
-  @F_Images
+  @F_Images @Cookit
   Scenario: Delete recipe image by recipe_id with valid recipe_id path
     Given valid recipe_id path for delete recipe image by recipe id
     When Send DELETE request for delete recipe image by recipe_id

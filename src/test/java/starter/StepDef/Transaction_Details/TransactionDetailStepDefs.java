@@ -22,7 +22,7 @@ public class TransactionDetailStepDefs {
 
     @Given("valid transaction_detail_id path for get user transaction detail with valid transaction_detail_id path")
     public void validTransaction_detail_idPathForGetUserTransactionDetailWithValidTransaction_detail_idPath() {
-        trDetails.getListUserTransactionPositive(Constants.TRANSACTION_DETAIL_ID);
+        trDetails.getListUserTransactionPositive(Constants.TRANSACTION_ID);
     }
 
     @When("Send GET request for get user transaction detail with valid transaction_detail_id path")

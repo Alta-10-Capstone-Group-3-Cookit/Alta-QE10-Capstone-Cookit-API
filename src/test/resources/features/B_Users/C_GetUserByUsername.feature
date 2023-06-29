@@ -1,6 +1,6 @@
 Feature: Get user by username
 
-  @B_Users
+  @B_Users @Cookit
   Scenario: Get user by username with valid offset and valid username parameter
     Given "user1" as valid username and "1" as valid offset parameter for get user by username
     When Send GET request for get user by username with valid offset and valid username parameter

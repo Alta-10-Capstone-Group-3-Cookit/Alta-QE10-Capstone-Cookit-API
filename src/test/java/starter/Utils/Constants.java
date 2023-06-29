@@ -9,10 +9,8 @@ public class Constants {
     //    token usertest5
     public static String BEARER_TOKEN;
 
-    public static String USERNAME = "usertest5";
-    public static String REG_USERNAME = "usertest9";
-    public static String EMAIL = "usertest5@example.com";
-    public static String REG_EMAIL = "usertest9@example.com";
+    public static String USERNAME = "usertest15";
+    public static String EMAIL = "usertest15@example.com";
     public static String PASSWORD = "Asdfg123";
     public static String OUR_USER_ID;
     public static String STEP_ID;
@@ -25,7 +23,7 @@ public class Constants {
     public static String INGREDIENT_DETAIL_ID = "16";
     public static String CART_ID;
     public static String TRANSACTION_ID;
-    public static String TRANSACTION_DETAIL_ID = "9";
+    public static String TRANSACTION_DETAIL_ID;
 
     // URL
     public static String REGISTER = BASE_URL + "/register";

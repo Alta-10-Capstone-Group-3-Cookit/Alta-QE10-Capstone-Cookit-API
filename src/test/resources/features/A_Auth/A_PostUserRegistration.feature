@@ -1,6 +1,6 @@
 Feature: Post User Registration
 
-  @A_Auth
+  @A_Auth @Cookit
   Scenario: Post register user with valid path and valid json body
     Given Post register user with valid path and valid json body
     When Send post registration user

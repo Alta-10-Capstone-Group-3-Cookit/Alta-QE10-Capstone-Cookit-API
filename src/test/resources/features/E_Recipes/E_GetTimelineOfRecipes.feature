@@ -1,6 +1,6 @@
 Feature: Get Timeline Of Recipes
 
-
+  @Cookit
   Scenario: Get timeline of recipes with valid path
     Given Get timeline of recipes with valid path
     When Send Get timeline of recipes

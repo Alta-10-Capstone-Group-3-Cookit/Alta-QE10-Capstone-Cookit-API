@@ -1,6 +1,6 @@
 Feature: Put update user's recipe
 
-
+  @Cookit
   Scenario: Put update user's recipe with valid recipe id and json body
     Given Put update user's recipe with valid recipe id and valid json body
     When Send put update user's recipes

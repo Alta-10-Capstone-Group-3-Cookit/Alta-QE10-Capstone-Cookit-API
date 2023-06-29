@@ -1,6 +1,6 @@
 Feature: Get user by id
 
-  @B_Users
+  @B_Users @Cookit
   Scenario: Get user by id with valid id path
     Given "2" as valid id path for get user by id with valid id path
     When Send GET request for get user by id with valid id path

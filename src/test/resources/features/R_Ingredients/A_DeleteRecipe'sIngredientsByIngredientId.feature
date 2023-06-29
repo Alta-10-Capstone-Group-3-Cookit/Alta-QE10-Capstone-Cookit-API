@@ -1,6 +1,6 @@
 Feature: Delete recipe's ingredients by ingredients id
 
-
+ @Cookit
   Scenario: Delete recipe's ingredients with valid recipe id and ingredient id
     Given Delete recipe's ingredients with valid recipe id and ingredient id
     When Send Delete recipe's ingredients Id

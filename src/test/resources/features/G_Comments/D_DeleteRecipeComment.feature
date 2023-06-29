@@ -1,6 +1,6 @@
 Feature: Delete recipe comment
 
-  @G_Comments
+  @G_Comments @Cookit
   Scenario: Delete recipe comment with valid recipe_id path and valid comment_id path
     Given valid recipe_id path, valid comment_id path for delete recipe comment with valid recipe_id path and valid comment_id path
     When Send DELETE request for delete recipe comment with valid recipe_id path and valid comment_id path

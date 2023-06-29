@@ -1,6 +1,6 @@
 Feature: Get details of recipes
 
-
+ @Cookit
   Scenario: Get details of recipes with valid recipe id
     Given Get details of recipes with valid recipe id
     When Send Get details of recipes

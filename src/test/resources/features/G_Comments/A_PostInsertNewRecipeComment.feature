@@ -1,6 +1,6 @@
 Feature: Post insert new recipe comment
 
-  @G_Comments
+  @G_Comments @Cookit
   Scenario: Post insert new recipe comment with valid recipe_id path, valid comment and valid image file
     Given "1" as valid recipe_id path, "mantap" as valid comment, and valid image file for post insert new recipe comment with valid recipe_id path, valid comment and valid image file
     When Send POST request for post insert new recipe comment with valid recipe_id path, valid comment and valid image file

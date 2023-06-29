@@ -1,6 +1,6 @@
 Feature: Delete Recipes Step
 
-
+ @Cookit
   Scenario: Delete recipes step with valid recipe id
     Given Delete recipes step Id with valid recipe id
     When Send Delete recipes step Id

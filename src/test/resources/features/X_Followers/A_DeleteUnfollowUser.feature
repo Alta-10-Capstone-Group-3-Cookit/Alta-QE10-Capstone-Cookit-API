@@ -1,5 +1,6 @@
 Feature: Delete Unfollow User
 
+  @Cookit
   Scenario: Delete unfollow user with valid id
     Given Delete unfollow user with valid id 30
     When Send delete unfollow user

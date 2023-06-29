@@ -1,6 +1,6 @@
 Feature: Put update user password
 
-  @B_Users
+  @B_Users @Cookit
   Scenario: Put update user password with valid request body
     Given Valid request body for put update user password with valid request body
     When Send PUT request for put update user password with valid request body

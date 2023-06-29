@@ -1,6 +1,6 @@
 Feature: Get list of recipe comment
 
-  @G_Comments
+  @G_Comments @Cookit
   Scenario: Get list of recipe comments with valid recipe_id path, valid page parameter and valid limit parameter
     Given valid recipe_id path, "1" as valid page parameter, and "1" as valid limit parameter for get list of recipe comments with valid recipe_id path, valid page parameter and valid limit parameter
     When Send GET request for get list of recipe comments with valid recipe_id path, valid page parameter and valid limit parameter

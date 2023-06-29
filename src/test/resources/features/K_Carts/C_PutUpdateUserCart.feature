@@ -1,6 +1,6 @@
 Feature: Put update user cart
 
-  @K_Carts
+  @K_Carts @Cookit
   Scenario: Put update user cart with valid cart_id path and valid request body json
     Given valid cart_id path and valid request body json for put update user cart with valid cart_id path and valid request body json
     When Send PUT request for put update user cart with valid cart_id path and valid request body json

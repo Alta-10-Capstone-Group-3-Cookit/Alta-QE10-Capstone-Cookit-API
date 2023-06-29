@@ -1,6 +1,6 @@
 Feature: Get List Verify
 
-
+  @Cookit
   Scenario: Get list verify with valid path
     Given Get list verify with valid path
     When Send get list verify

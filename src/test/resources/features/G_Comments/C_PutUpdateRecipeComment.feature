@@ -1,6 +1,6 @@
 Feature: Put update recipe comment
 
-  @G_Comments
+  @G_Comments @Cookit
   Scenario: Put update recipe comment with valid recipe_id path, valid comment_id path, valid comment and valid image file
     Given valid recipe_id path, valid comment_id path, "<comment>" as valid comment, and valid image file for put update recipe comment with valid recipe_id path, valid comment_id path, valid comment and valid image file
     When Send PUT request for put update recipe comment with valid recipe_id path, valid comment_id path, valid comment and valid image file

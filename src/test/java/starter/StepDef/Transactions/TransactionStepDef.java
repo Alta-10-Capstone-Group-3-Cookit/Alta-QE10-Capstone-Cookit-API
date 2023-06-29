@@ -41,7 +41,7 @@ public class TransactionStepDef {
 
     @When("Send Get list of user's transaction")
     public void sendGetListOfUserSTransaction() {
-        SerenityRest.when().get(Constants.USERS+"/transactions");
+         SerenityRest.when().get(Constants.USERS+"/transactions");
     }
 
     @And("Validate get list of user's transaction with valid path json schema")

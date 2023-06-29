@@ -1,6 +1,6 @@
 Feature: Put Users Approval
 
-
+ @Cookit
   Scenario: Put users approval with valid id and json body
     Given Put users approval with valid id and json body
     When Send put users approval

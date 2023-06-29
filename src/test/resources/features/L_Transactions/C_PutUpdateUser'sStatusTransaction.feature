@@ -1,6 +1,6 @@
 Feature: Put update user's status transaction
 
-
+ @Cookit
   Scenario: Put update user's status transaction with valid transaction id
     Given Put update user's status transaction with valid transaction id
     When Send Put update user's status transaction
