@@ -9,8 +9,8 @@ public class Constants {
     //    token usertest5
     public static String BEARER_TOKEN;
 
-    public static String USERNAME = "usertest18";
-    public static String EMAIL = "usertest18@example.com";
+    public static String USERNAME = "naufalapi13";
+    public static String EMAIL = "naufalapi13@example.com";
     public static String PASSWORD = "Asdfg123";
     public static String OUR_USER_ID;
     public static String STEP_ID;
