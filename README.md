@@ -11,7 +11,8 @@ This is an API automation testing project for Cookit API. This project was made 
 
 ![Screenshot from 2023-07-05 21-55-45](https://github.com/Alta-10-Capstone-Group-3-Cookit/Alta-QE10-Capstone-Cookit-API/assets/83111966/c2f68c9b-13e4-41d8-9387-c2b5f83d4276)
 
-![Screenshot from 2023-07-05 21-55-45](https://github.com/Alta-10-Capstone-Group-3-Cookit/Alta-QE10-Capstone-Cookit-API/assets/83111966/b32dd6e0-4f91-4c47-bf99-2a6ac7d35181)
+![Screenshot from 2023-07-05 21-56-08](https://github.com/Alta-10-Capstone-Group-3-Cookit/Alta-QE10-Capstone-Cookit-API/assets/83111966/31f7f09a-06c5-4ef0-9dab-08daa930c34a)
+
 
 
 
