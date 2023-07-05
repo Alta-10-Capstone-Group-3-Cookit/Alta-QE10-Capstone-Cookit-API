@@ -18,7 +18,8 @@ This is an API automation testing project for Cookit API. This project was made 
 
 ## API Test Coverage:
 
-![Screenshot from 2023-07-05 21-57-06](https://github.com/Alta-10-Capstone-Group-3-Cookit/Alta-QE10-Capstone-Cookit-API/assets/83111966/14793155-8fd3-47f7-a34b-7128b65b9066)
+![Screenshot from 2023-07-05 22-15-34](https://github.com/Alta-10-Capstone-Group-3-Cookit/Alta-QE10-Capstone-Cookit-API/assets/83111966/f2c6eba7-b9e1-4c2e-a832-88119399f41c)
+
 
 
 ![Screenshot from 2023-07-05 21-59-51](https://github.com/Alta-10-Capstone-Group-3-Cookit/Alta-QE10-Capstone-Cookit-API/assets/83111966/71bb4f10-d9b9-4e66-8847-4635e3bb6dc4)
